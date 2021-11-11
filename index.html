@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<script type="text/javascript" src="partice.js"></script>
+	<script type="text/javascript" src="event.js"></script>
+	<script type="text/javascript" src="jq/jQuery.js"></script>
+	<style type="text/css">
+		#flip,#panel{
+			background-color:#00FFFF;
+			border: 1px solid black;
+			padding: 5px;
+			text-align: center;
+
+		}
+		#flip1,#panel{
+			background-color:#00FFFF;
+			border: 1px solid black;
+			padding: 5px;
+			text-align: center;
+
+		}
+		#panel{
+			padding: 50px;
+			display: none;
+		}
+	</style>
+
+	</head>
+<body>
+	<h1>It is jQuery</h1>
+	<h2>Hello jQuery</h2>
+	 Farhad <br>
+	 <ul>
+	 	<li>Tea</li>
+	 	<li>Coffee</li>
+	 	<li>Milk</li>
+	 	<li>Cold Drinks</li>
+	 </ul>
+	 <!--<p>It is paragraph</p> -->
+	 <div class='d1' style="border:1px solid black; padding: 2px; width:250px">
+	 <p>  
+			<b>This is a little poem: </b><br/>  
+			Twinkle, twinkle, little star<br/>  
+			How I wonder what you are<br/>  
+			Up above the world so high<br/>  
+			Like a diamond in the sky<br/>  
+			Twinkle, twinkle little star<br/>  
+			How I wonder what you are  
+	</p>
+	</div>  
+	<button id="hide">Hide</button>
+	<button class="show">Show</button>
+	<button id="toggle">Toggle</button>
+	<button id="fadein">Click To FadeIn</button>
+	<button id="fadeout">Click To FadeOut</button>
+	<button id='fadeto'>Clice To FadeTo</button>
+	<div id='div1' style="height:80px;width:80px;display: none; background-color: red;"></div>
+	<div id='div2' style="height:80px; width:80px;display: none;background-color: green;"></div>
+	<div id='div3' style="height:80px; width:80px;display: none;background-color: tomato;"></div>
+	<div id="flip">Click To Flip</div>
+	<div id='panel'>
+		Hello javatpoint.com!   
+        It is the best tutorial website to learn jQuery and other languages
+	</div>
+	<div id="flip1">Click To Sideup</div>
+
+	<script type="text/javascript">
+		$("h1").css('color','red');
+		$("ul").before('Kolkata');
+		$("ul").after('Delhi');
+		$("li:last").html("<li>Water</li>");
+		$("h2").css('background-color','indigo');
+		$('ul li').css('color','green');
+		$('p').click(function(){
+			alert("It is clicked");
+		});
+		$("#hide").click(function(){
+			$('p').hide();
+		});
+		$(".show").click(function(){
+			$('p').show();
+		});
+		$('#toggle').click(function(){
+			$('div d1').toggle(15000);
+		});
+		$("#fadein").click(function(){
+			$('#div1').fadeIn();
+			$('#div2').fadeIn("slow");
+			$('#div3').fadeIn(3000);
+		});
+		$("#fadeout").click(function(){
+			$('#div1').fadeOut();
+			$('#div2').fadeOut("slow");
+			$('#div3').fadeOut(3000);
+		});
+		$("#fadeto").click(function(){
+			$('#div1').fadeTo('slow',0.3);
+			$('#div2').fadeTo("slow",0.4);
+			$('#div3').fadeTo('slow',0.5);
+		});
+		$('#flip').click(function(){
+			$('#panel').slideDown();
+		});
+		$('#flip1').click(function(){
+			$('#panel').slideUp();
+		});
+		/* others are------
+		slideToggle(),delay(),animate()*/
+	</script>
+</body>
+</html>
